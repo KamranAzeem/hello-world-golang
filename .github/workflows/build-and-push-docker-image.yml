@@ -30,4 +30,5 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ${{ env.IMAGE_NAME }}:${{ github.GITHUB_REF_NAME }}
+          tags: ${{ env.IMAGE_NAME }}
+          labels: ${{ github.GITHUB_REF_NAME }}
