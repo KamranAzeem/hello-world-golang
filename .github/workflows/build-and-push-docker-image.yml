@@ -11,7 +11,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: ${{ github.GITHUB_REPOSITORY }}
+      IMAGE_NAME: ${GITHUB_REPOSITORY}
       
     steps:
       -
@@ -31,4 +31,4 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ${{ env.IMAGE_NAME }}:${{ github.GITHUB_REF_NAME }}
+          tags: ${IMAGE_NAME}:${GITHUB_REF_NAME}
