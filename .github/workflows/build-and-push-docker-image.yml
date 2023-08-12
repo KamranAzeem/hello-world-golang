@@ -11,7 +11,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: ${{ github.GITHUB_REPOSITORY }}
+      IMAGE_NAME: $GITHUB_REPOSITORY
       
     steps:
       - name: Set up QEMU
