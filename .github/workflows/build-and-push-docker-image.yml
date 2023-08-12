@@ -30,8 +30,8 @@ jobs:
         run: |
           echo "IMAGE_NAME is - $IMAGE_NAME"
           echo "env.IMAGE_NAME is - ${{ env.IMAGE_NAME }}"
-          echo "GITHUB_REF_NAME is - $GITHUB_REF_NAME
-          echo "github.GITHUB_REF_NAME - ${{ github.GITHUB_REF_NAME }}
+          echo "GITHUB_REF_NAME is - $GITHUB_REF_NAME"
+          echo "github.GITHUB_REF_NAME - ${{ github.GITHUB_REF_NAME }}"
 
       - name: Build and push
         uses: docker/build-push-action@v4
