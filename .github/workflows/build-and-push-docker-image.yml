@@ -41,7 +41,8 @@ jobs:
           fi
           TAGS="${TAG},${DOCKER_USERNAME}/${DOCKER_IMAGE_NAME}:${SHORT_HASH}"
           echo "Complete Docker image-name and tags are setup as: ${TAGS}"
-          echo ::set-output name=tags::${TAGS}
+          # echo ::set-output name=tags::${TAGS}
+          echo "{tags}=${TAGS}" >> $GITHUB_OUTPUT
 
 
       - name: Display variables
@@ -59,5 +60,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.prep.outputs.tags }}
+          tags: ${{ steps.prepare-docker-image-tags.outputs.tags }}
                     
