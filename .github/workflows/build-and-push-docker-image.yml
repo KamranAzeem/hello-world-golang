@@ -51,7 +51,7 @@ jobs:
           echo "DOCKER_IMAGE_NAME is - $DOCKER_IMAGE_NAME"
           echo "env.DOCKER_IMAGE_NAME is - ${{ env.DOCKER_IMAGE_NAME }}"
           echo "GITHUB_REF_NAME is - $GITHUB_REF_NAME"
-          echo "TAGS - ${{ steps.prepare-docker-image-tags.env.TAGS }}"
+          echo "TAGS - ${{ steps.prepare-docker-image-tags.TAGS }}"
 
       - name: Build and push docker image
         id:  build-and-push-docker-image
@@ -61,5 +61,5 @@ jobs:
           file: ./Dockerfile
           push: true
           # tags: ${{ steps.prepare-docker-image-tags.outputs.tags }}
-          tags: ${{ steps.prepare-docker-image-tags.env.TAGS }}
+          tags: ${{ steps.prepare-docker-image-tags.TAGS }}
                     
