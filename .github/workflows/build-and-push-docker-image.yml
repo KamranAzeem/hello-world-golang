@@ -11,7 +11,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     env:
-      DOCKER_IMAGE_NAME: ${{ GITHUB_REPOSITORY }}
+      DOCKER_IMAGE_NAME: hello-world-golang
       
     steps:
       - name: Set up QEMU
