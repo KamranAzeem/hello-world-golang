@@ -11,5 +11,5 @@ func main() {
 }
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hello world - We like: black")
+    fmt.Fprintf(w, "Hello world - We like: orange")
 }
