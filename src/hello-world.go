@@ -15,5 +15,5 @@ func main() {
 }
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, os.Getenv("GREETING") + " world - We like: Yellow . ")
+    fmt.Fprintf(w, os.Getenv("GREETING") + " world - We like: Red . ")
 }
